@@ -2,7 +2,6 @@ package br.com.alura.java.io.teste;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,8 +15,8 @@ public class TesteCopiarArquivo {
 
 	public static void main(String[] args) throws IOException {
 		
-		// Leitura do arquivo
-		InputStream fis = new FileInputStream("lorem.txt");
+		// Leitura a digitação do teclado
+		InputStream fis = System.in;
 		Reader isr = new InputStreamReader(fis);
 		BufferedReader br = new BufferedReader(isr);
 
@@ -28,7 +27,7 @@ public class TesteCopiarArquivo {
 		
 		// Realiza cópia linha por linha
 		String linha = br.readLine();
-		while (linha != null) {
+		while (linha != null && !linha.isEmpty()) {
 			bw.write(linha);
 			bw.newLine();
 			linha = br.readLine();

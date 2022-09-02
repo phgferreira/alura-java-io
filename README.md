@@ -17,3 +17,12 @@ Esse projeto tem o objetivo de colocar em prática tudo que for aprendido no cur
 3. Ler e escrever dados abstraindo implementações;
 4. Classes abstratas e concretas para escrita e leitura.
 
+### Aula 03
+* Várias alternativas para estabelecer uma saída para um arquivo de texto, como:
+    - A classe **FileWriter**
+    - A classe **PrintStream**
+    - A classe **PrintWriter**
+* Alguns detalhes da classe **System**, como:
+    - O atributo **System.out** é do tipo **PrintStream**
+    - O método **System.lineSeparator()** devolve os caracteres que representam uma nova linha
+    - O método **System.currentTimeMillis()** devolve os milissegundos que passaram desde 1 de Janeiro de 1970

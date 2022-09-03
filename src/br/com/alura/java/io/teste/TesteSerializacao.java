@@ -1,27 +1,27 @@
 package br.com.alura.java.io.teste;
 
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 
 public class TesteSerializacao {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
 		
-		String fileName = "objeto.bin";
-//		String nome = "Paulo Ferreira";
+//		Cliente cliente = new Cliente();
+//		cliente.setNome("Paulo");
+//		cliente.setProfissao("Analista de Sistemas");
+//		cliente.setCpf("12345678990");
+		
+		String fileName = "cliente.bin";
 //		ObjectOutputStream oos = new ObjectOutputStream( new FileOutputStream(fileName) );
-//		oos.writeObject(nome);
+//		oos.writeObject(cliente);
 //		oos.close();
 		
 		ObjectInputStream ois = new ObjectInputStream( new FileInputStream(fileName) );
-		String nome = (String) ois.readObject();
+		Cliente cliente = (Cliente) ois.readObject();
 		ois.close();
-		System.out.println(nome);
-		
+		System.out.println(cliente.getNomeCpfPrifissao());
 
 	}
 

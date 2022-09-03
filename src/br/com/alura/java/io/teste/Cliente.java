@@ -1,5 +1,7 @@
 package br.com.alura.java.io.teste;
 
+import java.io.Serializable;
+
 /**
  * Classe que representa um cliente no Bytebank.
  *
@@ -7,11 +9,20 @@ package br.com.alura.java.io.teste;
  * @version 0.1
  */
 
-public class Cliente {
+public class Cliente implements Serializable {
 
+	private static final long serialVersionUID = 9205117266306915548L;
 	private String nome;
 	private String cpf;
 	private String profissao;
+	
+	public String getNomeCpf() {
+		return nome + ", " + cpf;
+	}
+	
+	public String getNomeCpfPrifissao() {
+		return nome + ", " + cpf + ", " + profissao;
+	}
 
 	public String getNome() {
 		return nome;

@@ -12,15 +12,18 @@ public class Conta implements Serializable {
 
 	private Integer agencia;
 	private Integer conta;
+	// A palavra chave transient significa o titular não é serializavel e não dá erro, simplesmente não o grava
+	private transient Cliente titular;
+	private Double saldo = 0.0;
 	
-	public Conta() {
-		
-	}
-
 	public Conta(Integer agencia, Integer conta) {
 		super();
 		this.agencia = agencia;
 		this.conta = conta;
+	}
+	
+	public void deposita(Double valor) {
+		this.saldo += valor;
 	}
 
 	public Integer getAgencia() {
@@ -38,5 +41,16 @@ public class Conta implements Serializable {
 	public void setConta(Integer conta) {
 		this.conta = conta;
 	}
+
+	public Cliente getTitular() {
+		return titular;
+	}
+
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
 	
+	public Double getSaldo() {
+		return saldo;
+	}
 }

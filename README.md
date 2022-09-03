@@ -26,3 +26,9 @@ Esse projeto tem o objetivo de colocar em prática tudo que for aprendido no cur
     - O atributo **System.out** é do tipo **PrintStream**
     - O método **System.lineSeparator()** devolve os caracteres que representam uma nova linha
     - O método **System.currentTimeMillis()** devolve os milissegundos que passaram desde 1 de Janeiro de 1970
+
+### Aula 04
+1. Leitura de arquivos com Scanner;
+2. Uso de delimitador com Scanner;
+3. Formatação de texto e também de números;
+4. Definição de Localização para formatar o texto.

@@ -14,7 +14,7 @@ public class TesteLeitura2 {
 		
 		while (scanner.hasNextLine()) {
 			String linha = scanner.nextLine();
-			System.out.println(linha);
+			//System.out.println(linha);
 			
 			Scanner linhaScanner = new Scanner(linha);
 			/* Definir a localidade é importante para o caso de precisar converter para double
@@ -23,13 +23,15 @@ public class TesteLeitura2 {
 			linhaScanner.useLocale(Locale.US);
 			linhaScanner.useDelimiter(",");
 			
-			String valor1 = linhaScanner.next();
-			Integer valor2 = linhaScanner.nextInt();
-			Integer valor3 = linhaScanner.nextInt();
-			String valor4 = linhaScanner.next();
-			Double valor5 = linhaScanner.nextDouble();
-
-			System.out.println(valor1 + ", " + valor2 + ", " + valor3 + ", " + valor4 + ", " + valor5);
+			String tipoConta = linhaScanner.next();
+			Integer agencia = linhaScanner.nextInt();
+			Integer numero = linhaScanner.nextInt();
+			String titular = linhaScanner.next();
+			Double saldo = linhaScanner.nextDouble();
+			
+			// Esse método faz com que cada argumento (valor1, valor2, etc.) encaixem dentro de um string nos lugares %s
+			System.out.format( new Locale("pt","br"), "%s - %04d-%08d, %20s: %08.2f %n", 
+													tipoConta, agencia, numero, titular, saldo);
 			
 			linhaScanner.close();
 			

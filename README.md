@@ -40,3 +40,14 @@ Conheceu o problema dos Encodings: onde diferentes codepages são usados para es
 Usando o Windows, você implementou um programa para verificar a implementação do Java para Unicodes e Encodings e conheceu várias classes e métodos. Aprendeu que a classe String possui um método chamado codePointAt() para revelar o codepoint de determinado caractere a partir de sua posição na string. Descobriu que a classe que representa um encoding ou Character Set é Charset e o método estático para retornar uma referência com o charset default é defaultCharset(). Aprendeu que a classe String também possui um método para transformar os caracteres em bytes, o getBytes(), que usado sem argumento de entrada utiliza o charset padrão. Existem também duas sobrecargas para esse método, onde você pode informar o charset que deseja utilizar para a transformação. Conheceu a classe StandardCharsets, do pacote java.nio, que possui constantes pra os principais charsets. Por fim simulou o problema de encodings, gerando uma nova string a partir de um construtor que tinha como argumentos os bytes transformados no charset e o charset desejado para transformação. A solução foi garantir que o mesmo charset fosse aplicado, tanto na entrada quanto na saída.
 
 As classes Scanner e InputStreamReader possuem sobrecargas de construtores que recebem como argumento qual charset será utilizado para fazer a transformação dos bytes em strings. De modo análogo para escrita, a classe PrintWriter também permite informar qual charset será utilizado para transformar a string nos bytes específicos.
+
+### Aula 06
+* A criação do fluxo binário a partir de um objeto é chamado de **serialização**;
+* A criação de um objeto a partir de um fluxo binário é chamado de **desserialização**;
+* A classe deve implementar a interface ***java.io.Serializable***;
+* A serialização/desserialização funciona em cascata e também com herança;
+* Existe a palavra-chave ***transient*** para indicar que o atributo não deve ser serializado;
+* É boa prática colocar o atributo estático ***serialVersionUDI*** para versionar a classe;
+* A versão sempre fica guardada no fluxo binário;
+* Se não colocarmos explicitamente o ***serialVersionUID***, a versão será gerada dinamicamente;
+* É raro usar a serialização na "unha", mas é um conhecimento importante, pois será utilizado por outrasa bibliotecas.

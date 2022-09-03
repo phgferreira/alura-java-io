@@ -13,7 +13,7 @@ public class TesteEscritaPrintStreamPrintWriter {
 		//BufferedWriter bw = new BufferedWriter(osw);
 		//PrintStream ps = new PrintStream(new File("lorem2.txt"));
 		//PrintStream ps = new PrintStream("lorem2.txt");
-		PrintWriter ps = new PrintWriter("lorem2.txt");
+		PrintWriter ps = new PrintWriter("lorem2.txt", "utf-8");
 		
 		ps.println("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ");
 		ps.println("tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, ");

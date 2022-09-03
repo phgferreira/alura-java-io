@@ -1,7 +1,6 @@
 package br.com.alura.java.io.teste;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.Locale;
@@ -12,7 +11,7 @@ public class TesteLeitura2 {
 	public static void main(String[] args) throws IOException {
 		
 		//Scanner scanner = new Scanner("contas.csv"); => Isso não funciona
-		Scanner scanner = new Scanner(new File("contas.csv"), StandardCharsets.US_ASCII);
+		Scanner scanner = new Scanner(new File("contas.csv"), "utf-8");
 		
 		while (scanner.hasNextLine()) {
 			String linha = scanner.nextLine();
